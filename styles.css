@@ -1,0 +1,253 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents body scrolling */
+}
+
+/* Top navbar */
+.top-navbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    height: 50px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-container .nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.navbar-container .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Main container for sidebar and content */
+.container {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 50px; /* Space for the fixed navbar */
+}
+
+/* Side navbar for tabs */
+.side-navbar {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed; /* Fixes the side navbar */
+    top: 50px; /* Position below the top navbar */
+    bottom: 0; /* Stretches to the bottom of the page */
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    overflow-y: auto; /* Adds scroll if content overflows */
+}
+
+.side-navbar h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    display: block;
+    width: 100%;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tab-button.active {
+    background-color: #555;
+}
+
+.tab-button:hover {
+    background-color: #666;
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    margin-left: 200px; /* Space for the fixed side navbar */
+    overflow-y: auto; /* Allows scrolling for content */
+    height: calc(100vh - 50px); /* Ensures content fits within viewport height */
+}
+
+/* Page content sections */
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    margin-top: 0;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.footer-left, .footer-center, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.footer-center {
+    flex: 1;
+    justify-content: center;
+}
+
+.footer-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #007bff;
+}
+
+/* Additional styles for the submenu */
+/* Submenu container styling */
+.frontend-submenu {
+    display: none;
+    margin-top: 10px;
+    width: 160px;
+}
+
+/* Show the submenu when active */
+.frontend-submenu.active {
+    display: block;
+}
+
+/* Button styling */
+.frontend-submenu button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.frontend-submenu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Submenu container styling */
+.submenu {
+    display: none;
+    margin-top: 10px;
+    width: 160px;
+}
+
+/* Show the submenu when active */
+.submenu.active {
+    display: block;
+}
+
+/* Button styling */
+.submenu button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button hover effect */
+.submenu button:hover {
+    background-color: #f0f0f0;
+}
+
+nav.top-navbar {
+    background-color: #6667AB;
+    border: 0.5px solid #a9a1a1;
+}
+footer.footer {
+    background-color: #6667AB;
+    border: 0.5px solid #a9a1a1;
+}
+nav.side-navbar {
+    background-color: #6f70ba9c;
+}
+button.tab-button {
+    background-color: #6667AB;
+}
+.tab-button.active {
+    background-color: #6667AB; /* Default color for active tab */
+  }
+.tab-button:hover {
+  background-color: #555; /* Color when hovered */
+}  
+
